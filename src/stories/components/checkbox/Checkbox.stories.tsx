@@ -5,14 +5,15 @@ export default {
   component: Component,
   argTypes: {
     id: {
-      defaultValue: 'test',
+      table: { defaultValue: { summary: 'test-id' } },
       control: { type: 'text' },
     },
     label: {
-      defaultValue: 'gleeb',
+      table: { defaultValue: { summary: 'gleeb' } },
       control: { type: 'text' },
     },
   },
 };
 
 export const Default = Component;
+
