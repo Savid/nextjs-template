@@ -21,6 +21,9 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
+      "@app/*": [
+        "src/*"
+      ],
       "@styles/*": [
         "src/styles/*"
       ],
