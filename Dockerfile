@@ -51,4 +51,6 @@ EXPOSE 8080
 
 ENV PORT 8080
 
+ENV NODE_OPTIONS="-r next-logger"
+
 CMD ["node", "server.js"]
