@@ -13,6 +13,7 @@ const customJestConfig = {
   clearMocks: true,
   coverageDirectory: 'coverage',
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
 
 export default createJestConfig(customJestConfig);
