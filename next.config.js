@@ -57,6 +57,9 @@ const nextConfig = {
     outputStandalone: true,
   },
   poweredByHeader: false,
+  compiler: {
+    reactRemoveProperties: true,
+  },
 };
 
 module.exports = nextConfig;

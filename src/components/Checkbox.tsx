@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
 
-const Checkbox = ({ id, label }: { id: string; label?: string }) => {
+const Checkbox = ({
+  id,
+  label,
+  onChange,
+}: {
+  id: string;
+  label?: string;
+  onChange?: (value: boolean) => void;
+}) => {
   const [isChecked, setIsChecked] = useState(false);
 
-  const onChange = () => {
-    setIsChecked(!isChecked);
+  const onChangeEvent = () => {
+    const newValue = !isChecked;
+    if (onChange) onChange(newValue);
+    setIsChecked(newValue);
   };
 
   return (
@@ -21,9 +31,10 @@ const Checkbox = ({ id, label }: { id: string; label?: string }) => {
           <input
             id={`person-${id}`}
             name={`person-${id}`}
+            data-testid="input"
             type="checkbox"
             className="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-            onChange={onChange}
+            onChange={onChangeEvent}
           />
         </div>
       </div>

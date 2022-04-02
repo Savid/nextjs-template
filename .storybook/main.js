@@ -1,14 +1,14 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 module.exports = {
-  "stories": [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
+  stories: [
+    '../src/**/*.stories.mdx',
+    '../src/**/*.stories.@(js|jsx|ts|tsx)'
   ],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
     {
       /**
        * Fix Storybook issue with PostCSS@8
@@ -22,9 +22,12 @@ module.exports = {
       },
     },
   ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "webpack5"
+  framework: '@storybook/react',
+  features: {
+    interactionsDebugger: true,
+  },
+  core: {
+    builder: 'webpack5'
   },
   webpackFinal: async (config) => {
     // used for tsconfig paths
