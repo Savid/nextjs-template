@@ -33,18 +33,15 @@ export default componentMeta;
 export const Default: ComponentStoryObj<typeof Component> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const label = canvas.getByLabelText(args.label ?? '');
     const input = canvas.getByTestId('input');
-    await userEvent.click(label);
+    await userEvent.click(canvas.getByLabelText(args.label ?? ''));
     await waitFor(async () => {
       await expect(args.onChange).toHaveBeenCalled();
-      await expect(label).toHaveFocus();
       await expect(input).toBeChecked();
     });
     await userEvent.click(input);
     await waitFor(async () => {
       await expect(args.onChange).toHaveBeenCalled();
-      await expect(input).toHaveFocus();
       await expect(input).not.toBeChecked();
     });
   },
