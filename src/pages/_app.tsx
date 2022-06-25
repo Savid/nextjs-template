@@ -1,4 +1,6 @@
 import '@styles/globals.css';
+import 'focus-visible';
+
 import { NEXT_PUBLIC_WEB_VITALS_ENDPOINT } from '@app/constants';
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
 
