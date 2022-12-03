@@ -53,8 +53,8 @@ const nextConfig = {
     ];
   },
   reactStrictMode: true,
-  experimental: {
-    outputStandalone: true,
+  output: {
+    standaline: true,
   },
   poweredByHeader: false,
   compiler: {
