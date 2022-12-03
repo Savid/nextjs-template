@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 import Checkbox from '@components/Checkbox';
 import { Popover, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -95,17 +95,12 @@ const Home: NextPage = () => {
                 <div className="flex items-center justify-between w-full md:w-auto">
                   <a href="#">
                     <span className="sr-only">Workflow</span>
-                    <Image
-                      className="w-auto h-8 sm:h-10"
-                      src="/tailwindui-logo.svg"
-                      layout="fill"
-                      alt=""
-                    />
+                    <Image className="w-auto h-8 sm:h-10" src="/tailwindui-logo.svg" fill alt="" />
                   </a>
                   <div className="flex items-center -mr-2 md:hidden">
                     <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md bg-gray-50 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                       <span className="sr-only">Open main menu</span>
-                      <MenuIcon className="w-6 h-6" aria-hidden="true" />
+                      <Bars4Icon className="w-6 h-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
                 </div>
@@ -149,12 +144,12 @@ const Home: NextPage = () => {
               <div className="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
                 <div className="flex items-center justify-between px-5 pt-4">
                   <div>
-                    <Image className="w-auto h-8" src="/tailwindui-logo.svg" alt="" layout="fill" />
+                    <Image className="w-auto h-8" src="/tailwindui-logo.svg" alt="" fill />
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                       <span className="sr-only">Close menu</span>
-                      <XIcon className="w-6 h-6" aria-hidden="true" />
+                      <XMarkIcon className="w-6 h-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
                 </div>

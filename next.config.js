@@ -53,9 +53,7 @@ const nextConfig = {
     ];
   },
   reactStrictMode: true,
-  output: {
-    standaline: true,
-  },
+  output: 'standalone',
   poweredByHeader: false,
   compiler: {
     reactRemoveProperties: true,
